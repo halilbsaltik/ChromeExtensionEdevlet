@@ -1,0 +1,38 @@
+{
+    "manifest_version": 2,
+    "name": "MYS E-Devlet",
+    "description": "E-Devlet Sistemi Login Olma ve İzleme Sistemi",
+    "author": "Metal Yapi Software",
+    "version": "1.0.0",
+    "icons": {
+        "128": "icon128.png",
+        "32": "icon32.png",
+        "16": "icon16.png"
+    },
+
+    "browser_action":{
+        "default_icon":"icon16.png",
+        "default_popup": "popup.html"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["https://giris.turkiye.gov.tr/Giris/gir/*","https://www.turkiye.gov.tr/*"],
+            "js": ["content.js"],
+            "css": ["content.css"]
+        }
+    ],
+
+    "host_permissions": [
+        "*://*.turkiye.gov.tr/"
+      ],
+
+    "permissions": [
+        "tabs",
+        "https://giris.turkiye.gov.tr/Giris/gir/*",
+        "https://www.turkiye.gov.tr/*",
+        "cookies"
+    ]
+
+
+}

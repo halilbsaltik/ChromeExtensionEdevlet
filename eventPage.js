@@ -1,0 +1,3 @@
+function textString(){
+    return "aaaa";
+}
